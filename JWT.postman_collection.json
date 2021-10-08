@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "197456bf-1571-4aad-883b-dd0cbabf6f35",
+		"name": "JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:51893/api/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "basic YWJjOmFiYw==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"client\", \"password\": \"123\", \"companyId\":\"123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51893/api/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51893",
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:51893/api/values",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1laWQiOiIxMTMzNCIsInJvbGUiOiJjbGllbnQiLCJpc3MiOiJodHRwOi8vMTI3LjAuMDEiLCJhdWQiOiJodHRwczovL2RvbWFpbi5jb20iLCJleHAiOjE2MzM3MTg5MDEsIm5iZiI6MTYzMzY3NTcwMX0.v3R9-82KZa-iYiCDCPpOe15xfl108ko6A5Xl0ZsTe2s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51893/api/values",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51893",
+					"path": [
+						"api",
+						"values"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
